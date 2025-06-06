@@ -1,0 +1,54 @@
+body {
+    font-family: sans-serif;
+    background-color: #255165;
+}
+
+#container {
+    margin: 0 auto;
+    width: 50%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+}
+
+#content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    text-align:center;
+    justify-content: center;
+}
+
+.card {
+    width: 100px;
+    border-color: grey;
+    border-radius: 10px;
+}
+
+.card.chosen {
+    background-color: red;
+}
+
+.card.disabled {
+    opacity: 50%;
+}
+
+#confirm-button {
+    margin-top: 16px;
+}
+
+#refresh-button {
+    display: none;
+}
+
+a {
+    display: block;
+    padding: 16px 0;
+}

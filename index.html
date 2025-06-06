@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>rock paper scissors</title>
+    <meta name="description" content="rock paper scissors game">
+    <!-- <link rel="icon" href="../favicon.ico"/> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link href="./styles/style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+    <div id="container">
+        <a href="/main-menu.html"><h1>rock paper scissors</h1></a>
+        <h3 id="opponent-header">your opponent is choosing their warrior...</h3>
+        <div id="content">
+            <button id="enemy-rock-button" class="card" data-value="rock" disabled>
+                <img src="./images/rock.svg" alt="rock"/>
+            </button>
+            <button id="enemy-paper-button" class="card" data-value="paper" disabled>
+                <img src="./images/paper.svg" alt="paper"/>
+            </button>
+            <button id="enemy-scissors-button" class="card" data-value="scissors" disabled>
+                <img src="./images/scissors.svg" alt="scissors"/>
+            </button>
+        </div>
+      <h3>please choose your warrior:</h3>
+      <div id="content">
+        <button onclick="optionChosen('rock')" id="rock-button" class="card" data-value="rock">
+            <img src="./images/rock.svg" alt="rock"/>
+        </button>
+        <button onclick="optionChosen('paper')" id="paper-button" class="card" data-value="paper">
+            <img src="./images/paper.svg" alt="paper"/>
+        </button>
+        <button onclick="optionChosen('scissors')" id="scissors-button" class="card" data-value="scissors">
+            <img src="./images/scissors.svg" alt="scissors"/>
+        </button>
+    </div>
+        <button onclick="optionSubmitted()" id="confirm-button" class="card">
+            <img src="./images/confirm.svg" alt="confirm"/>
+        </button>
+        <h2 id="results"></h2>
+        <button id="refresh-button" onclick="refreshPage()" class="card">
+            Rematch?
+        </button>
+    </div>
+  <script src="./scripts/main.js"></script>
+  </body>
+</html>
