@@ -1,21 +1,27 @@
 var userSelected;
 var enemySelected = "rock";
 
+// todo - bloop on click not on release
 function optionChosen(value) {
-    // todo - unhighlight all others
-    let selected;
+    document.getElementById("blip").play();
+    let rockButton = document.getElementById('rock-button');
+    let paperButton = document.getElementById('paper-button');
+    let scissorsButton = document.getElementById('scissors-button');
     switch(value) {
         case "rock":
-            selected = document.getElementById('rock-button');
-            selected.classList.add('chosen');
+            paperButton.classList.remove('chosen');
+            scissorsButton.classList.remove('chosen');
+            rockButton.classList.add('chosen');
             break;
         case "paper":
-            selected = document.getElementById('paper-button');
-            selected.classList.add('chosen');
+            rockButton.classList.remove('chosen');
+            scissorsButton.classList.remove('chosen');
+            paperButton.classList.add('chosen');
             break;
         case "scissors":
-            selected = document.getElementById('scissors-button');
-            selected.classList.add('chosen');
+            paperButton.classList.remove('chosen');
+            rockButton.classList.remove('chosen');
+            scissorsButton.classList.add('chosen');
             break;
     }
 };
@@ -43,9 +49,9 @@ function postResults() {
             selected.classList.add('chosen');
             break;
     }
-
-    let results = document.getElementById("results");
+    
     // todo - lol
+    let results = document.getElementById("results");
     if(userSelected === "paper") {
         results.innerText = "You win";
     } else if(userSelected === "scissors") {
